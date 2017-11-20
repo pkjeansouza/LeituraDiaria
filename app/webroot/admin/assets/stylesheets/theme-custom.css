@@ -1,0 +1,146 @@
+/* Notificacao acima do modal*/
+.ui-pnotify {
+    z-index: 10002;
+}
+
+/* Bootstrap Maxlength acima do modal */
+.bootstrap-maxlength {
+    z-index: 10002 !important;
+}
+
+/* Datepicker acima do modal */
+.datepicker {
+    z-index: 10002 !important;
+}
+
+.left-5 {
+    margin-left: 5px;
+}
+
+.left-10 {
+    margin-left: 10px;
+}
+
+.left-15 {
+    margin-left: 15px;
+}
+
+.left-20 {
+    margin-left: 20px;
+}
+
+.top-5 {
+    margin-top: 5px;
+}
+
+.top-10 {
+    margin-top: 10px;
+}
+
+.top-15 {
+    margin-top: 15px;
+}
+
+.top-20 {
+    margin-top: 20px;
+}
+
+.top-50 {
+    margin-top: 50px;
+}
+
+/*.menu-desabilitado {*/
+/*display: none !important;*/
+/*}*/
+
+
+
+.img-thumbnail {
+    border-radius: 4px;
+    position: relative;
+}
+
+.img-thumbnail img {
+    border-radius: 4px;
+}
+
+.img-thumbnail .zoom {
+    background: #CCC;
+    border-radius: 100%;
+    bottom: 8px;
+    color: #FFF;
+    display: block;
+    height: 30px;
+    padding: 6px;
+    position: absolute;
+    right: 8px;
+    text-align: center;
+    width: 30px;
+}
+
+.img-thumbnail .zoom i {
+    font-size: 14px;
+    left: -1px;
+    position: relative;
+    top: -3px;
+}
+
+.img-thumbnail.img-thumbnail-hover-icon {
+    position: relative;
+}
+
+.img-thumbnail.img-thumbnail-hover-icon img {
+    position: relative;
+    z-index: 1;
+}
+
+.img-thumbnail.img-thumbnail-hover-icon:before {
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    transition: all 0.2s;
+    background: rgba(0, 0, 0, 0.65);
+    border-radius: 4px;
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0;
+    z-index: 2;
+}
+
+.img-thumbnail.img-thumbnail-hover-icon:after {
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    transition: all 0.2s;
+    font-family: FontAwesome;
+    color: #FFF;
+    content: "\f1f8";
+    font-size: 30px;
+    height: 30px;
+    position: absolute;
+    top: 30%;
+    margin-top: -15px;
+    display: block;
+    text-align: center;
+    width: 100%;
+    opacity: 0;
+    z-index: 3;
+}
+
+.img-thumbnail.img-thumbnail-hover-icon:hover:before {
+    opacity: 1;
+}
+
+.img-thumbnail.img-thumbnail-hover-icon:hover:after {
+    top: 50%;
+    opacity: 1;
+}
+
+.text-middle {
+    vertical-align: middle !important;
+}
