@@ -1,0 +1,108 @@
+.icon-featured {
+    display: inline-block;
+    margin: 15px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    color: #FFF;
+    font-size: 40px;
+    line-height: 140px;
+}
+
+.fa-agenda {
+    content: url(../img/LeituraDiaria/Icones/agenda.svg);
+    width: 70%;
+    height: 70%;
+}
+
+.fa-livro {
+    content: url(../img/LeituraDiaria/Icones/notebook.svg);
+    width: 70%;
+    height: 70%;
+}
+
+.fa-livro-marcado {
+    content: url(../img/LeituraDiaria/Icones/open-book.svg);
+    width: 70%;
+    height: 70%;
+}
+
+.IconeVamosComecar {
+    font-size: 0.8em;
+}
+
+.VamosComecar {
+    padding: 20px;
+    margin-top: 3px;
+}
+
+@media (min-width: 1200px) {
+    .TextoIntroducao {
+        margin-top: 50px;
+    }
+
+    .TextoObjetivo {
+        margin-top: 40px;
+    }
+}
+
+@media (min-width: 991px) and (max-width: 1200px) {
+    .TextoIntroducao {
+        margin-top: 40px;
+    }
+
+    .TextoObjetivo {
+        margin-top: 30px;
+    }
+}
+
+@media (min-width: 741px) and (max-width: 991px) {
+    .TextoIntroducao {
+        margin-top: 20px;
+    }
+
+    .TextoObjetivo {
+        margin-top: -5px;
+    }
+}
+
+@media (min-width: 614px) and (max-width: 741px) {
+    .TextoIntroducao {
+        margin-top: 10px;
+    }
+
+    .TextoObjetivo {
+        margin-top: -17px;
+    }
+}
+
+@media (min-width: 527px) and (max-width: 614px) {
+    .TextoIntroducao {
+        margin-top: 7px;
+    }
+
+    .TextoObjetivo {
+        margin-top: -17px;
+    }
+}
+
+@media (min-width: 430px) and (max-width: 527px) {
+    .TextoIntroducao {
+        margin-top: 0;
+    }
+
+    .TextoObjetivo {
+        margin-top: -23px;
+    }
+}
+
+@media (min-width: 100px) and (max-width: 430px) {
+    .TextoIntroducao {
+        margin-top: -17px;
+    }
+}
+
+
