@@ -33,14 +33,15 @@ App::uses('Controller', 'Controller');
  */
 class AppController extends Controller
 {
-    public $components = array(
+    public $components = [
+        'RequestHandler',
         'Flash'
-    );
+    ];
 
     public function afterFilter()
     {
         if ($this->response->statusCode() == '404') {
-            $this->render('error500', 'error');
+            $this->render('error404', 'error');
         }
         if ($this->response->statusCode() == '500') {
             $this->render('error500', 'error');

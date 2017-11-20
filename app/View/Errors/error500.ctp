@@ -5,7 +5,7 @@
             <div class="col-sm-8">
                 <div class="main-error mb-xlg">
                     <h2 class="error-code text-dark text-center text-weight-semibold m-none">500 <i class="fa fa-file"></i></h2>
-                    <p class="error-explanation text-center">Nos desculpe, ocorreu um erro interno.</p>
+                    <p class="error-explanation text-center">Ooops! Ocorreu um erro interno.</p>
                 </div>
             </div>
             <div class="col-sm-4">
