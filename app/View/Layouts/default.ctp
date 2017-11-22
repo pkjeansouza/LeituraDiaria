@@ -29,6 +29,7 @@ $nomeDoAplicativo = 'Leitura Diária';
     <?php
     echo $this->Html->meta('icon');
     echo $this->fetch('meta');
+
     //VENDOR CSS
     echo $this->Html->css('../vendor/bootstrap/css/bootstrap.min.css');
     echo $this->Html->css('../vendor/font-awesome/css/font-awesome.min.css');
@@ -37,11 +38,13 @@ $nomeDoAplicativo = 'Leitura Diária';
     echo $this->Html->css('../vendor/owl.carousel/assets/owl.carousel.min.css');
     echo $this->Html->css('../vendor/owl.carousel/assets/owl.theme.default.min.css');
     echo $this->Html->css('../vendor/magnific-popup/magnific-popup.min.css');
+
     //THEME CSS
     echo $this->Html->css('theme.css');
     echo $this->Html->css('theme-elements.css');
     echo $this->Html->css('theme-blog.css');
     echo $this->Html->css('theme-shop.css');
+
     //ADMIN EXTENSION
     echo $this->Html->css('../admin/assets/vendor/bootstrap-datepicker/css/bootstrap-datepicker3.min.css');
     echo $this->Html->css('../admin/assets/vendor/jquery-ui/jquery-ui.min.css');
@@ -64,12 +67,16 @@ $nomeDoAplicativo = 'Leitura Diária';
     echo $this->Html->css('../admin/assets/vendor/codemirror/theme/monokai.css');
     echo $this->Html->css('../admin/assets/stylesheets/theme-admin-extension.css');
     echo $this->Html->css('../admin/assets/stylesheets/skins/extension.css');
+
     //SKINS
     echo $this->Html->css('skins/default.css');
+
     //CUSTOM CSS
     echo $this->Html->css('custom.css');
+
     //PAGE CSS
     echo $this->fetch('css');
+
     //HEAD LIBS
     echo $this->Html->script('../vendor/modernizr/modernizr.min.js');
     echo $this->Html->scriptBlock('var baseUrl = "' . Router::url('/') . '"');
@@ -159,38 +166,40 @@ $nomeDoAplicativo = 'Leitura Diária';
 
 <?php
 //VENDOR SCRIPTS
-echo $this->Html->script('../vendor/jquery/jquery.min.js');
-echo $this->Html->script('../vendor/jquery.appear/jquery.appear.min.js');
-echo $this->Html->script('../vendor/jquery.easing/jquery.easing.min.js');
-echo $this->Html->script('../vendor/jquery-cookie/jquery-cookie.min.js');
-echo $this->Html->script('../vendor/bootstrap/js/bootstrap.min.js');
-echo $this->Html->script('../vendor/common/common.min.js');
-//echo $this->Html->script('../vendor/jquery.validation/jquery.validation.min.js');
-echo $this->Html->script('../vendor/jquery.easy-pie-chart/jquery.easy-pie-chart.min.js');
-echo $this->Html->script('../vendor/jquery.gmap/jquery.gmap.min.js');
-echo $this->Html->script('../vendor/jquery.lazyload/jquery.lazyload.min.js');
+echo $this->Html->script('../vendor/jquery/jquery.js');
+echo $this->Html->script('../vendor/jquery.appear/jquery.appear.js');
+echo $this->Html->script('../vendor/jquery.easing/jquery.easing.js');
+echo $this->Html->script('../vendor/jquery-cookie/jquery-cookie.js');
+echo $this->Html->script('../vendor/bootstrap/js/bootstrap.js');
+echo $this->Html->script('../vendor/common/common.js');
+echo $this->Html->script('../vendor/jquery.easy-pie-chart/jquery.easy-pie-chart.js');
+echo $this->Html->script('../vendor/jquery.gmap/jquery.gmap.js');
+echo $this->Html->script('../vendor/jquery.lazyload/jquery.lazyload.js');
 echo $this->Html->script('../vendor/isotope/jquery.isotope.min.js');
 echo $this->Html->script('../vendor/owl.carousel/owl.carousel.min.js');
-echo $this->Html->script('../vendor/magnific-popup/jquery.magnific-popup.min.js');
-echo $this->Html->script('../vendor/vide/vide.min.js');
+echo $this->Html->script('../vendor/magnific-popup/jquery.magnific-popup.js');
+echo $this->Html->script('../vendor/vide/vide.js');
+
 //Theme Base, Components and Settings
 echo $this->Html->script('theme.js');
+
 //ADMIN EXTENSION
-echo $this->Html->script('../admin/assets/vendor/jquery-validation/jquery.validate.min.js');
+echo $this->Html->script('../admin/assets/vendor/jquery-validation/jquery.validate.js');
 echo $this->Html->script('../admin/assets/vendor/jquery-validation/additional-methods.js');
-echo $this->Html->script('../admin/assets/vendor/bootstrap-datepicker/js/bootstrap-datepicker.min.js');
+echo $this->Html->script('../admin/assets/vendor/bootstrap-datepicker/js/bootstrap-datepicker.js');
+echo $this->Html->script('../admin/assets/vendor/bootstrap-datepicker/locales/bootstrap-datepicker.pt-BR.min.js');
 echo $this->Html->script('../admin/assets/vendor/jquery-placeholder/jquery-placeholder.js');
-echo $this->Html->script('../admin/assets/vendor/jquery-ui/jquery-ui.min.js');
+echo $this->Html->script('../admin/assets/vendor/jquery-ui/jquery-ui.js');
 echo $this->Html->script('../admin/assets/vendor/jqueryui-touch-punch/jqueryui-touch-punch.js');
-echo $this->Html->script('../admin/assets/vendor/select2/js/select2.min.js');
+echo $this->Html->script('../admin/assets/vendor/select2/js/select2.js');
 echo $this->Html->script('../admin/assets/vendor/select2/js/i18n/pt-BR.js');
 echo $this->Html->script('../admin/assets/vendor/bootstrap-multiselect/bootstrap-multiselect.js');
 echo $this->Html->script('../admin/assets/vendor/jquery-maskedinput/jquery.maskedinput.js');
-echo $this->Html->script('../admin/assets/vendor/pnotify/pnotify.custom');
+echo $this->Html->script('../admin/assets/vendor/pnotify/pnotify.custom.js');
 echo $this->Html->script('../admin/assets/vendor/bootstrap-tagsinput/bootstrap-tagsinput.js');
-echo $this->Html->script('../admin/assets/vendor/bootstrap-colorpicker/js/bootstrap-colorpicker.min.js');
+echo $this->Html->script('../admin/assets/vendor/bootstrap-colorpicker/js/bootstrap-colorpicker.js');
 echo $this->Html->script('../admin/assets/vendor/bootstrap-timepicker/bootstrap-timepicker.js');
-echo $this->Html->script('../admin/assets/vendor/bootstrap-fileupload/bootstrap-fileupload.min');
+echo $this->Html->script('../admin/assets/vendor/bootstrap-fileupload/bootstrap-fileupload.min.js');
 echo $this->Html->script('../admin/assets/vendor/fuelux/js/spinner.js');
 echo $this->Html->script('../admin/assets/vendor/dropzone/dropzone.js');
 echo $this->Html->script('../admin/assets/vendor/bootstrap-markdown/js/markdown.js');
@@ -207,16 +216,20 @@ echo $this->Html->script('../admin/assets/vendor/summernote/summernote.min.js');
 echo $this->Html->script('../admin/assets/vendor/bootstrap-maxlength/bootstrap-maxlength.js');
 echo $this->Html->script('../admin/assets/vendor/ios7-switch/ios7-switch.js');
 echo $this->Html->script('../admin/assets/vendor/bootstrap-confirmation/bootstrap-confirmation.js');
-echo $this->Html->script('../admin/assets/vendor/jquery-datatables/media/js/jquery.dataTables');
-echo $this->Html->script('../admin/assets/vendor/jquery-datatables/extras/TableTools/js/dataTables.tableTools.min');
-echo $this->Html->script('../admin/assets/vendor/jquery-datatables-bs3/assets/js/datatables');
+echo $this->Html->script('../admin/assets/vendor/jquery-datatables/media/js/jquery.dataTables.js');
+echo $this->Html->script('../admin/assets/vendor/jquery-datatables/extras/TableTools/js/dataTables.tableTools.js');
+echo $this->Html->script('../admin/assets/vendor/jquery-datatables-bs3/assets/js/datatables.js');
 echo $this->Html->script('../admin/assets/javascripts/theme.admin.extension.js');
+
 //CUSTOM
+
 //Theme Initialization Files
 echo $this->Html->script('theme.init.js');
 echo $this->Html->script('custom.js');
 echo $this->Html->script('api.js');
+
 //PAGE Scripts
+echo $this->Html->script('LeituraDiaria/Layouts/default', ['block' => 'script']);
 echo $this->fetch('script');
 ?>
 </body>

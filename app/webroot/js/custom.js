@@ -163,9 +163,9 @@ $.extend($.validator, {
         maxlength: $.validator.format("Por favor digite no máximo {0} caracteres."),
         minlength: $.validator.format("Por favor digite no mínimo {0} caracteres."),
         rangelength: $.validator.format("Please enter a value between {0} and {1} characters long."),
-        range: $.validator.format("Please enter a value between {0} and {1}."),
-        max: $.validator.format("Please enter a value less than or equal to {0}."),
-        min: $.validator.format("Please enter a value greater than or equal to {0}."),
+        range: $.validator.format("Por favor digite um valor entre {0} e {1}."),
+        max: $.validator.format("Por favor digite um valor menor ou igual a {0}."),
+        min: $.validator.format("Por favor digite um valor maior ou igual a {0}."),
         zipcode: 'test'
     }
 });
@@ -205,132 +205,12 @@ jQuery.validator.setDefaults({
         }
     }
 });
+
 $.validator.methods.email = function( value, element ) {
     return this.optional( element ) || /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test( value );
 };
-
-$.validator.addMethod("matriculaMasked", function (value, element) {
-    var check = false;
-    value = value.replace(/_*-*\.*/g, '');
-    if(value.length === 11){
-        check = true;
-    }
-
-    return this.optional(element) || check;
-}, $.validator.messages.required);
-
-$.validator.addMethod("cpfMasked", function (value, element) {
-    var check = false;
-    value = value.replace(/_*-*\.*/g, '');
-    if(value.length === 11){
-        check = true;
-    }
-
-    return this.optional(element) || check;
-}, $.validator.messages.required);
-
 
 $.fn.select2.defaults.set('language', 'pt-BR');
 $('[data-plugin-maxlength]').on('blur', function() {
     $('.bootstrap-maxlength').remove();
 });
-
-
-
-
-// Lightbox
-(function (theme, $) {
-
-    theme = theme || {};
-
-    var instanceName = '__lightbox';
-
-    var PluginLightbox = function ($el, opts) {
-        return this.initialize($el, opts);
-    };
-
-    PluginLightbox.defaults = {
-        tClose: 'Fechar (Esc)', // Alt text on close button
-        tLoading: 'Carregando...', // Text that is displayed during loading. Can contain %curr% and %total% keys
-        gallery: {
-            tPrev: 'Anterior (Seta Esquerda)', // Alt text on left arrow
-            tNext: 'Próximo (Seta Direita)', // Alt text on right arrow
-            tCounter: '%curr% de %total%' // Markup for "1 of 7" counter
-        },
-        image: {
-            tError: '<a href="%url%">A imagem</a> não pode ser carregada.' // Error message when image could not be loaded
-        },
-        ajax: {
-            tError: '<a href="%url%">O conteúdo</a> não pode ser carregado.' // Error message when ajax request failed
-        },
-        callbacks: {
-            open: function () {
-                $('html').addClass('lightbox-opened');
-            },
-            close: function () {
-                $('html').removeClass('lightbox-opened');
-            }
-        }
-    };
-
-    PluginLightbox.prototype = {
-        initialize: function ($el, opts) {
-            if ($el.data(instanceName)) {
-                return this;
-            }
-
-            this.$el = $el;
-
-            this
-                .setData()
-                .setOptions(opts)
-                .build();
-
-            return this;
-        },
-
-        setData: function () {
-            this.$el.data(instanceName, this);
-
-            return this;
-        },
-
-        setOptions: function (opts) {
-            this.options = $.extend(true, {}, PluginLightbox.defaults, opts, {
-                wrapper: this.$el
-            });
-
-            return this;
-        },
-
-        build: function () {
-            if (!($.isFunction($.fn.magnificPopup))) {
-                return this;
-            }
-
-            this.options.wrapper.magnificPopup(this.options);
-
-            return this;
-        }
-    };
-
-    // expose to scope
-    $.extend(theme, {
-        PluginLightbox: PluginLightbox
-    });
-
-    // jquery plugin
-    $.fn.themePluginLightbox = function (opts) {
-        return this.map(function () {
-            var $this = $(this);
-
-            if ($this.data(instanceName)) {
-                return $this.data(instanceName);
-            } else {
-                return new PluginLightbox($this, opts);
-            }
-
-        });
-    }
-
-}).apply(this, [window.theme, jQuery]);

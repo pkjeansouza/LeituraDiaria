@@ -15,13 +15,11 @@
         <div class="row">
             <div class="col-md-12 center">
                 <ul id="portfolioLoadMoreWrapper" class="portfolio-list sort-destination sort-source"
-                    data-sort-id="portfolio"
                     data-total-pages="<?= $quantidadePaginasCarregamento ?>" style="position: relative;">
 
                     <?php foreach ($primeirosQuatroLivros as $livro) { ?>
-                        <li class="col-md-3 col-sm-6 col-xs-12 isotope-item livro" style="width: 285px; height: 480px;"
-                            data-id="<?= $livro['Livro']['id'] ?>"
-                            style="position: absolute; left: 0; top: 0;">
+                        <li class="col-md-3 col-sm-6 col-xs-12 isotope-item livro" data-id="<?= $livro['Livro']['id'] ?>"
+                            style="height: 480px; left: 0; top: 0;">
                             <div class="portfolio-item">
                                 <?= $this->Html->link(
                                     '<span class="thumb-info thumb-info-lighten thumb-info-no-zoom">
@@ -34,7 +32,8 @@
                                     $livro['Livro']['nome'] . '<br>' .
                                     $livro['Livro']['total_de_paginas'] . ' páginas
                                 </div>',
-                                    'javascript:void(0)', ['escape' => false, 'class' => 'text-decoration-none']) ?>
+                                    ['controller' => 'Lembretes', 'action' => 'novo_lembrete', $livro['Livro']['id']],
+                                    ['escape' => false, 'class' => 'text-decoration-none']) ?>
                             </div>
                         </li>
                     <?php } ?>

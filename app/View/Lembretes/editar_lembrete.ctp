@@ -11,13 +11,12 @@
 <?= $this->end(); ?>
 
 <div class="container">
-    <?= $this->Form->create('Lembrete', ['class' => 'form-horizontal form-bordered', 'id' => 'AddLembreteForm']); ?>
+    <?= $this->Form->create('Lembrete', ['class' => 'form-horizontal form-bordered', 'id' => 'EditLembreteForm']); ?>
+    <?= $this->Form->hidden('id'); ?>
+
     <section class="panel">
         <header class="panel-heading">
-            <h2 class="panel-title">Adicionar Lembrete</h2>
-            <p class="panel-subtitle">
-                Adicione a data e horário de sua preferência para que possamos te lembrar!
-            </p>
+            <h2 class="panel-title">Editar Lembrete</h2>
         </header>
         <div class="panel-body">
 
@@ -29,10 +28,9 @@
 
             <div class="form-group">
                 <label class="col-md-3 control-label">Livro <span
-                            class="text-danger">*</span></label>
+                        class="text-danger">*</span></label>
                 <div class="col-md-6">
                     <?= $this->Form->input('livro_id', ['type' => 'select',
-                        'value' => isset($idLivroSelecionado) ? $idLivroSelecionado : 'empty',
                         'empty' => 'Selecione',
                         'options' => $listaLivros,
                         'style' => ['width: 100%;'],
@@ -149,8 +147,8 @@
         <footer class="panel-footer">
             <div class="row">
                 <div class="col-sm-9 col-sm-offset-3">
-                    <?= $this->Form->button('Cadastrar', ['type' => 'submit', 'class' => ['btn btn-primary']]) ?>
-                    <?= $this->Form->button('Limpar', ['type' => 'button', 'class' => ['btn btn-default'], 'id' => 'BtnLimparFormulario']) ?>
+                    <?= $this->Form->button('Salvar', ['type' => 'submit', 'class' => ['btn btn-primary']]) ?>
+                    <?= $this->Html->link('Voltar', ['controller' => 'Lembretes', 'action' => 'meus_lembretes'], ['class' => ['btn btn-default']]) ?>
                 </div>
             </div>
         </footer>
@@ -158,4 +156,4 @@
     <?= $this->Form->end(); ?>
 </div>
 
-<?= $this->Html->script('LeituraDiaria/Lembretes/novo_lembrete', ['block' => 'script']) ?>
+<?= $this->Html->script('LeituraDiaria/Lembretes/editar_lembrete', ['block' => 'script']) ?>

@@ -1,5 +1,4 @@
-var formularioAdicionarLembrete = $("#AddLembreteForm");
-var btnLimparFormulario = $("#BtnLimparFormulario");
+var formularioEditarLembrete = $("#EditLembreteForm");
 var lembreteRepetir = $('#LembreteRepetir');
 
 var checkboxDomingo = $('#LembreteCheckboxDomingo');
@@ -11,8 +10,18 @@ var checkboxSexta = $('#LembreteCheckboxSexta');
 var checkboxSabado = $('#LembreteCheckboxSabado');
 
 (function () {
-    formularioAdicionarLembrete.validate();
+    formularioEditarLembrete.validate();
 }).apply(this, [jQuery]);
+
+$(document).ready(function () {
+    if (lembreteRepetir.val() === '0') {
+        $('#campo-data').attr('hidden', false);
+        $('#campo-dia-da-semana').attr('hidden', true);
+    } else {
+        $('#campo-data').attr('hidden', true);
+        $('#campo-dia-da-semana').attr('hidden', false);
+    }
+});
 
 lembreteRepetir.on('change', function (e) {
     e.preventDefault();
@@ -40,8 +49,8 @@ lembreteRepetir.on('change', function (e) {
     $(this).valid();
 });
 
-formularioAdicionarLembrete.on('submit', function (e) {
-    if (formularioAdicionarLembrete.valid()) {
+formularioEditarLembrete.on('submit', function (e) {
+    if (formularioEditarLembrete.valid()) {
         if (lembreteRepetir.val() === '1') {
             if (!validarCheckbox()) {
                 notificacao('warning', 'Por favor selecione pelo menos um dia.');
@@ -86,27 +95,4 @@ function validarCheckbox() {
 $('#LembreteLivroId').on('change', function (e) {
     e.preventDefault();
     $(this).valid();
-});
-
-btnLimparFormulario.on('click', function () {
-    checkboxDomingo.prop('checked', false);
-    checkboxSegunda.prop('checked', false);
-    checkboxTerca.prop('checked', false);
-    checkboxQuarta.prop('checked', false);
-    checkboxQuinta.prop('checked', false);
-    checkboxSexta.prop('checked', false);
-    checkboxSabado.prop('checked', false);
-
-    $('#LembreteLivroId').select2('val', '');
-    $('#LembreteTipo').select2('val', '');
-    $('#LembreteRepetir').val('');
-    $('#LembreteDataLembrete').val('');
-
-    limparValidation($('#LembreteLivroId'));
-    limparValidation($('#LembreteTipo'));
-    limparValidation($('#LembreteRepetir'));
-    limparValidation($('#LembreteDataLembrete'));
-
-    $('#campo-data').attr('hidden', true);
-    $('#campo-dia-da-semana').attr('hidden', true);
 });

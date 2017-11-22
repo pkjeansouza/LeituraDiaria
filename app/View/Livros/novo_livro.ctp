@@ -24,7 +24,7 @@
 
             <div id="campo-notificacao" style="padding-bottom: 0;">
                 <div id="notificacao-classe" style="margin-left: 15px; margin-right: 15px;">
-                    <i id="notificacao-icone"></i><span id="notificacao-mensagem"></span>
+                    <span id="notificacao-mensagem"></span>
                 </div>
             </div>
 

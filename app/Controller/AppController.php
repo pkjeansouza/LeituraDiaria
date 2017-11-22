@@ -35,7 +35,8 @@ class AppController extends Controller
 {
     public $components = [
         'RequestHandler',
-        'Flash'
+        'Flash',
+        'DataTable'
     ];
 
     public function afterFilter()
