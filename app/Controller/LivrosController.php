@@ -5,6 +5,14 @@
 
 class LivrosController extends AppController
 {
+    public function beforeFilter()
+    {
+        parent::beforeFilter();
+
+        $livrosAtivo = 'active';
+        $this->set('livrosAtivo', $livrosAtivo);
+    }
+
     public function meus_livros()
     {
         $primeirosQuatroLivros = $this->Livro->find('all', [

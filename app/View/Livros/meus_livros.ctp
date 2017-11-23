@@ -18,13 +18,12 @@
                     data-total-pages="<?= $quantidadePaginasCarregamento ?>" style="position: relative;">
 
                     <?php foreach ($primeirosQuatroLivros as $livro) { ?>
-                        <li class="col-md-3 col-sm-6 col-xs-12 isotope-item livro" data-id="<?= $livro['Livro']['id'] ?>"
-                            style="height: 480px; left: 0; top: 0;">
+                        <li class="col-md-3 col-sm-6 col-xs-12 isotope-item livro" data-id="<?= $livro['Livro']['id'] ?>">
                             <div class="portfolio-item">
                                 <?= $this->Html->link(
                                     '<span class="thumb-info thumb-info-lighten thumb-info-no-zoom">
                                     <span class="thumb-info-wrapper">' .
-                                    $this->Html->image($livro['Livro']['caminho_imagem'] ? $livro['Livro']['caminho_imagem'] : 'LeituraDiaria/Icones/agenda.svg',
+                                    $this->Html->image($livro['Livro']['caminho_imagem'] ? $livro['Livro']['caminho_imagem'] : 'LeituraDiaria/Livros/noimage.jpg',
                                         ['class' => 'img-responsive'])
                                     . '</span>
 								</span>

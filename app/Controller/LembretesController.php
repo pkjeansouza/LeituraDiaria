@@ -10,8 +10,8 @@ class LembretesController extends AppController
     {
         parent::beforeFilter();
 
-        $lembretes = 'active';
-        $this->set('lembretes', $lembretes);
+        $lembretesAtivo = 'active';
+        $this->set('lembretesAtivo', $lembretesAtivo);
     }
 
     public function meus_lembretes()
@@ -77,12 +77,14 @@ class LembretesController extends AppController
                     $this->request->data['Lembrete']['checkboxQuinta'] .
                     $this->request->data['Lembrete']['checkboxSexta'] .
                     $this->request->data['Lembrete']['checkboxSabado'];
+
+                $this->request->data['Lembrete']['data_lembrete'] = null;
             } else {
                 $this->request->data['Lembrete']['data_lembrete'] = $this->converterData($this->request->data['Lembrete']['data_lembrete']);
             }
 
             $this->request->data['Lembrete']['hora_lembrete'] = $this->request->data['Lembrete']['hora_lembrete'] . ':00';
-            $this->request->data['Lembrete']['data_lembrete'] = null;
+
 
             if ($this->Lembrete->save($this->request->data)) {
                 $this->Flash->success('O lembrete foi editado com sucesso.');

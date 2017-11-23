@@ -86,11 +86,9 @@ $nomeDoAplicativo = 'Leitura Diária';
 <body>
 <div class="body">
 
-    <header id="header"
-            class="header-narrow"
-            data-plugin-options="{'stickyEnabled': true, 'stickyEnableOnBoxed': true, 'stickyEnableOnMobile': true, 'stickyStartAt': 1, 'stickySetTop': '1'}"
-            style="min-height: 0;">
-        <div class="header-body" style="top: 0;">
+    <header id="header" class="header-narrow"
+            data-plugin-options="{'stickyEnabled': true, 'stickyEnableOnBoxed': true, 'stickyEnableOnMobile': true, 'stickyStartAt': 1, 'stickySetTop': '1'}">
+        <div class="header-body">
             <div class="header-container container">
                 <div class="header-row">
                     <div class="header-column">
@@ -106,14 +104,18 @@ $nomeDoAplicativo = 'Leitura Diária';
                     <div class="header-column">
                         <div class="header-row">
                             <div class="header-nav">
+                                <button class="btn header-btn-collapse-nav" data-toggle="collapse"
+                                        data-target=".header-nav-main">
+                                    <i class="fa fa-bars"></i>
+                                </button>
                                 <div class="header-nav-main header-nav-main-effect-1 header-nav-main-sub-effect-1 collapse">
                                     <nav>
                                         <ul class="nav nav-pills" id="mainNav">
-                                            <li>
+                                            <li class="<?= isset($homeAtivo) ? $homeAtivo : '' ?>">
                                                 <?= $this->Html->link('HOME', ['controller' => 'Pages', 'action' => 'home']) ?>
                                             </li>
-                                            <li class="dropdown">
-                                                <?= $this->Html->link('LIVROS', 'javascript:void(0)', ['class' => 'dropdown-toggle']) ?>
+                                            <li class="dropdown <?= isset($livrosAtivo) ? $livrosAtivo : '' ?>">
+                                                <?= $this->Html->link('LIVROS', '#', ['class' => 'dropdown-toggle']) ?>
                                                 <ul class="dropdown-menu">
                                                     <li>
                                                         <?= $this->Html->link('Meus Livros', ['controller' => 'Livros', 'action' => 'meus_livros'],
@@ -125,8 +127,8 @@ $nomeDoAplicativo = 'Leitura Diária';
                                                     </li>
                                                 </ul>
                                             </li>
-                                            <li class="dropdown">
-                                                <?= $this->Html->link('LEMBRETES', 'javascript:void(0)', ['class' => 'dropdown-toggle']) ?>
+                                            <li class="dropdown <?= isset($lembretesAtivo) ? $lembretesAtivo : '' ?>">
+                                                <?= $this->Html->link('LEMBRETES', '#', ['class' => 'dropdown-toggle']) ?>
                                                 <ul class="dropdown-menu">
                                                     <li>
                                                         <?= $this->Html->link('Meus Lembretes', ['controller' => 'Lembretes', 'action' => 'meus_lembretes'],
@@ -141,10 +143,6 @@ $nomeDoAplicativo = 'Leitura Diária';
                                         </ul>
                                     </nav>
                                 </div>
-                                <button class="btn header-btn-collapse-nav" data-toggle="collapse"
-                                        data-target=".header-nav-main">
-                                    <i class="fa fa-bars"></i>
-                                </button>
                             </div>
                         </div>
                     </div>

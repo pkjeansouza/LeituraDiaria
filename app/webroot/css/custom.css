@@ -47,6 +47,12 @@
     .TextoObjetivo {
         margin-top: 40px;
     }
+
+    .livro {
+        height: 480px;
+        left: 0;
+        top: 0;
+    }
 }
 
 @media (min-width: 991px) and (max-width: 1200px) {
@@ -66,6 +72,42 @@
 
     .TextoObjetivo {
         margin-top: -5px;
+    }
+}
+
+@media (min-width: 360px) and (max-width: 492px) {
+    .livro {
+        height: 700px;
+        width: 460px;
+        left: 0;
+        top: 0;
+    }
+}
+
+@media (min-width: 375px) and (max-width: 360px) {
+    .livro {
+        height: 530px;
+        width: 460px;
+        left: 0;
+        top: 0;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 375px) {
+    .livro {
+        height: 600px;
+        width: 460px;
+        left: 0;
+        top: 0;
+    }
+}
+
+@media (max-width: 320px) {
+    .livro {
+        height: 470px;
+        width: 460px;
+        left: 0;
+        top: 0;
     }
 }
 

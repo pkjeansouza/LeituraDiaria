@@ -110,6 +110,7 @@
                                 <i class="fa fa-calendar"></i>
                             </span>
                         <?= $this->Form->input('data_lembrete', [
+                            'data-date-start-date' => "0d",
                             'type' => 'text',
                             'div' => false,
                             'label' => false,
