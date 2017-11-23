@@ -12,8 +12,7 @@ Desenvolvido com PHP e Javascript.
 
 2. Alterar arquivo app/Config/database.php e inserir as informações do banco criado.
 
-
-      CREATE TABLE `lembretes` (
+       CREATE TABLE `lembretes` (
         `id` int(11) AUTO_INCREMENT PRIMARY KEY,
         `livro_id` int(11) NOT NULL,
         `repetir` int(11) NOT NULL,
@@ -22,16 +21,16 @@ Desenvolvido com PHP e Javascript.
         `hora_lembrete` time NOT NULL,
         `created` datetime DEFAULT NULL,
         `modified` datetime DEFAULT NULL
-      )
+       )
       
-      CREATE TABLE `livros` (
+       CREATE TABLE `livros` (
         `id` int(11) AUTO_INCREMENT PRIMARY KEY,
         `nome` varchar(200) NOT NULL,
         `total_de_paginas` int(11) NOT NULL,
         `caminho_imagem` text,
         `created` datetime DEFAULT NULL,
         `modified` datetime DEFAULT NULL
-      )
+       )
 
 ## Notificação 
 
